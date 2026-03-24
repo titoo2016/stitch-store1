@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة إدارة Stitch</title>
+  <meta name="description" content="لوحة إدارة متجر Stitch لإدارة المنتجات والطلبات." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-admin">
+  <div class="noise"></div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <img src="assets/stitch-logo.jpg" alt="شعار Stitch" />
+        <div class="brand-copy">
+          <strong>Stitch</strong>
+          <span>لوحة الإدارة</span>
+        </div>
+      </a>
+
+      <nav class="main-nav admin-nav">
+        <a href="index.html">العودة للمتجر</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div id="saveStatus" class="save-status" hidden></div>
+      <div id="loginView" class="admin-login-wrap">
+        <div class="panel login-panel">
+          <p class="micro">تسجيل الدخول</p>
+          <h2>لوحة إدارة المتجر</h2>
+          <p class="login-note">هذه اللوحة مخصصة للإدارة فقط.</p>
+
+          <div class="admin-logo-card">
+            <img class="admin-logo" src="assets/stitch-logo.png" alt="شعار Stitch" />
+          </div>
+
+          <form id="loginForm" class="form-panel">
+            <label>البريد الإلكتروني
+              <input type="email" id="adminEmail" required placeholder="admin@example.com" />
+            </label>
+
+            <label>كلمة المرور
+              <input type="password" id="adminPassword" required placeholder="كلمة المرور" />
+            </label>
+
+            <button type="submit" class="btn btn-primary">دخول</button>
+          </form>
+
+        </div>
+      </div>
+
+      <div id="dashboardView" class="dashboard hidden">
+        <div class="dashboard-top">
+          <div>
+            <p class="micro">الإدارة</p>
+            <h2>لوحة تحكم Stitch</h2>
+          </div>
+          <button class="btn btn-secondary" id="logoutBtn">تسجيل الخروج</button>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <small>عدد المنتجات</small>
+            <strong id="productsCount">0</strong>
+          </div>
+          <div class="stat-card">
+            <small>عدد الطلبات</small>
+            <strong id="ordersCount">0</strong>
+          </div>
+          <div class="stat-card">
+            <small>طلبات جديدة</small>
+            <strong id="newOrdersCount">0</strong>
+          </div>
+        </div>
+
+        <div class="admin-grid">
+          <form id="productForm" class="panel form-panel">
+            <p class="micro">المنتجات</p>
+            <h2 id="formTitle">إضافة منتج جديد</h2>
+            <p class="login-note">بعد كتابة البيانات اضغط <b>حفظ التعديلات</b> ليتم تحديث المتجر أونلاين لكل الناس.</p>
+            <input type="hidden" id="productId" />
+
+            <label>اسم المنتج
+              <input type="text" id="nameInput" required />
+            </label>
+
+            <label>السعر
+              <input type="number" id="priceInput" min="1" required />
+            </label>
+
+            <label>القسم
+              <select id="categoryInput">
+                <option value="هودي">هودي</option>
+                <option value="بنطال">بنطال</option>
+                <option value="جاكيت">جاكيت</option>
+                <option value="تيشيرت">تيشيرت</option>
+                <option value="شورت">شورت</option>
+              </select>
+            </label>
+
+            <label>الوصف
+              <textarea id="descriptionInput" rows="4" required></textarea>
+            </label>
+
+            <label>رابط الصورة
+              <input type="url" id="imageInput" required />
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">حفظ التعديلات</button>
+              <button type="button" class="btn btn-secondary" id="resetFormBtn">إلغاء</button>
+            </div>
+          </form>
+
+          <div class="panel">
+            <p class="micro">قائمة المنتجات</p>
+            <h2>إدارة المنتجات</h2>
+            <div id="adminProductsList" class="admin-products-list"></div>
+          </div>
+        </div>
+
+        <div class="section-block">
+          <div class="panel">
+            <div class="orders-head">
+              <div>
+                <p class="micro">الطلبات</p>
+                <h2>روت الطلبات</h2>
+              </div>
+              <button class="btn btn-danger" id="clearOrdersBtn">حذف كل الطلبات</button>
+            </div>
+            <div id="ordersList" class="orders-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>لوحة إدارة Stitch</span>
+      <span>تصميم وتطوير: <a href="https://www.facebook.com/m7mdtito" target="_blank" rel="noreferrer">TITO</a></span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
