@@ -4,7 +4,7 @@ const STORAGE_KEYS = {
   admin: "stitch_store_admin_session_v4"
 };
 
-const DEFAULT_USERNAME = "Stitch";
+const DEFAULT_USERNAME = "admin";
 const DEFAULT_PASSWORD = "Stitch#201555256793";
 
 const $ = (s) => document.querySelector(s);
