@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stitch | متجر ملابس رجالي</title>
+  <meta name="description" content="Stitch متجر ملابس رجالي ستريت وير بتصميم عصري، خامات مميزة، وطلب سريع مع الدفع عند الاستلام." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-store">
+  <div class="noise"></div>
+  <div class="bg-blur blur-1"></div>
+  <div class="bg-blur blur-2"></div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand">
+        <img src="assets/stitch-logo.jpg" alt="شعار Stitch" />
+        <div class="brand-copy">
+          <strong>Stitch</strong>
+          <span>متجر ملابس رجالي</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#home">الرئيسية</a>
+        <a href="#shop">المنتجات</a>
+        <a href="#about">عن المتجر</a>
+        <a href="#contact">التواصل</a>
+        <a href="admin.html">لوحة الإدارة</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn mobile-only" id="menuBtn" aria-label="القائمة">☰</button>
+        <button class="cart-pill" id="openCartBtn">
+          <span>السلة</span>
+          <b id="cartCount">0</b>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section" id="home">
+      <div class="container hero-shell">
+        <div class="hero-copy">
+          <p class="micro">STITCH / EGYPT</p>
+          <h1>ستايل رجالي عصري<br>لناس بتحب التميز</h1>
+          <div class="price">الدفع عند الاستلام</div>
+          <p class="desc">
+            Stitch هو متجر متخصص في الملابس الرجالي بطابع ستريت وير وعصري، مع اهتمام بالخامة، الراحة،
+            والشكل النهائي للقطعة. وفرنا لك تجربة طلب كاملة باللغة العربية مع سلة مشتريات،
+            تسجيل طلب، ولوحة إدارة منفصلة لإدارة المنتجات والطلبات.
+          </p>
+          <div class="hero-actions">
+            <a href="#shop" class="btn btn-primary">تسوق الآن</a>
+            <a href="#contact" class="btn btn-secondary">تواصل معنا</a>
+          </div>
+
+          <div class="hero-features">
+            <div class="feature-chip">هودي</div>
+            <div class="feature-chip">بنطال</div>
+            <div class="feature-chip">جاكيت</div>
+            <div class="feature-chip">تيشيرت</div>
+            <div class="feature-chip">شورت</div>
+          </div>
+        </div>
+
+        <div class="hero-stage">
+          <div class="hero-ring"></div>
+          <div class="hero-card">
+            <div class="hero-jacket hero-logo-card">
+              <img class="hero-logo" src="assets/stitch-logo.png" alt="شعار Stitch" />
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-side">
+          <div class="side-panel">
+            <div class="side-item">
+              <small>الخامات</small>
+              <strong>قطن / بوليستر / دنيم / ميلتون</strong>
+            </div>
+            <div class="side-item">
+              <small>المقاسات</small>
+              <strong>S / M / L / XL / XXL</strong>
+            </div>
+            <div class="side-item">
+              <small>نظام الشراء</small>
+              <strong>طلب مباشر + دفع عند الاستلام</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="micro">المنتجات</p>
+            <h2>منتجات Stitch</h2>
+          </div>
+          <div class="filters">
+            <input id="searchInput" type="search" placeholder="ابحث عن منتج..." />
+            <select id="categoryFilter">
+              <option value="all">كل الأقسام</option>
+              <option value="هودي">هودي</option>
+              <option value="بنطال">بنطال</option>
+              <option value="جاكيت">جاكيت</option>
+              <option value="تيشيرت">تيشيرت</option>
+              <option value="شورت">شورت</option>
+            </select>
+          </div>
+        </div>
+        <div id="productsGrid" class="products-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="about">
+      <div class="container about-grid">
+        <div class="panel">
+          <p class="micro">عن Stitch</p>
+          <h2>وصف مناسب للمتجر</h2>
+          <p>
+            Stitch براند مصري للملابس الرجالي يركز على القطع العملية والستايل النظيف،
+            ويقدم منتجات مناسبة للحياة اليومية واللوك العصري. هدفنا أن يلاقي العميل
+            قطعة مميزة بخامة محترمة وسعر مناسب وتجربة شراء سهلة وواضحة.
+          </p>
+        </div>
+        <div class="panel">
+          <p class="micro">مميزات المتجر</p>
+          <ul class="feature-list">
+            <li>الموقع بالكامل باللغة العربية.</li>
+            <li>سلة مشتريات ونظام طلب كامل.</li>
+            <li>الدفع عند الاستلام.</li>
+            <li>لوحة إدارة منفصلة بيوزر وباسورد.</li>
+            <li>إدارة كاملة للمنتجات والطلبات.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="contact">
+      <div class="container contact-grid">
+        <div class="panel">
+          <p class="micro">تواصل معنا</p>
+          <h2>بيانات التواصل</h2>
+          <div class="contact-list">
+            <a href="tel:01555256793">01555256793</a>
+            <a href="tel:01101001695">01101001695</a>
+            <span>📍 ٢١ ش يحيى المشد - خلف خير زمان - سموحة - الإسكندرية</span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <p class="micro">السوشيال ميديا</p>
+          <h2>تابع Stitch</h2>
+          <div class="social-links">
+            <a class="social-link" href="https://www.instagram.com/stitch_eg21?igsh=anY4YW03c2gzOHQ=" target="_blank" rel="noreferrer">
+              <span class="social-icon">◎</span>
+              <span>انستجرام</span>
+            </a>
+            <a class="social-link" href="https://www.tiktok.com/@stitch_eg21?_r=1&_t=ZS-94wFloUX7TD" target="_blank" rel="noreferrer">
+              <span class="social-icon">♪</span>
+              <span>تيك توك</span>
+            </a>
+            <a class="social-link" href="https://wa.me/201555256793" target="_blank" rel="noreferrer">
+              <span class="social-icon">✆</span>
+              <span>واتساب</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-head">
+      <h3>سلة المشتريات</h3>
+      <button id="closeCartBtn" class="icon-btn">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-foot">
+      <div class="total-row">
+        <span>الإجمالي</span>
+        <strong id="cartTotal">0 جنيه</strong>
+      </div>
+      <button class="btn btn-primary block-btn" id="openCheckoutBtn">إكمال الطلب</button>
+    </div>
+  </aside>
+
+  <div id="overlay" class="overlay"></div>
+
+  <div class="modal" id="checkoutModal">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h3>تأكيد الطلب</h3>
+        <button class="icon-btn" id="closeCheckoutBtn">×</button>
+      </div>
+
+      <form id="checkoutForm" class="checkout-form">
+        <label>الاسم الكامل
+          <input type="text" id="customerName" required placeholder="اكتب اسمك" />
+        </label>
+
+        <label>رقم الهاتف
+          <input type="tel" id="customerPhone" required placeholder="01xxxxxxxxx" />
+        </label>
+
+        <label>العنوان
+          <input type="text" id="customerAddress" required placeholder="المدينة - المنطقة - الشارع" />
+        </label>
+
+        <label>ملاحظات الطلب
+          <textarea id="customerNotes" rows="4" placeholder="لون / مقاس / ملاحظات إضافية"></textarea>
+        </label>
+
+        <div class="checkout-note">
+          طريقة الدفع: <strong>الدفع عند الاستلام</strong>
+        </div>
+
+        <button type="submit" class="btn btn-primary block-btn">تأكيد الطلب الآن</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 Stitch Store</span>
+      <span>تصميم وتطوير: <a href="https://www.facebook.com/m7mdtito" target="_blank" rel="noreferrer">TITO</a></span>
+    </div>
+  </footer>
+
+  <script src="store.js"></script>
+</body>
+</html>
